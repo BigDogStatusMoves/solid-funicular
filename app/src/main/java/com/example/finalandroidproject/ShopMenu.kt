@@ -31,6 +31,7 @@ class ShopMenu : AppCompatActivity() {
 
         listView.setOnItemClickListener{parent, view, position, id ->
             listView.isItemChecked(position)
+            Toast.makeText(this, "You Clicked: " + listView.getItemAtPosition(position), Toast.LENGTH_SHORT).show()
             adapter.notifyDataSetChanged()
 
         }
