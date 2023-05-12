@@ -17,12 +17,13 @@ class ItemAdapter (var cantext: Context,
         val layoutInflater = LayoutInflater.from(cantext)
         val itemView = layoutInflater.inflate(myResource, null)
 
+        //variables in listView
         val name = itemView.findViewById<TextView>(R.id.name_of_item)
         val image = itemView.findViewById<ImageView>(R.id.item_image)
         val price = itemView.findViewById<TextView>(R.id.price_of_item)
         val quantity = itemView.findViewById<TextView>(R.id.quantity_of_item)
         val checkBox = itemView.findViewById<CheckBox>(R.id.item_check)
-
+        //array to app
         name.text = items[position].name
         image.setImageResource(items[position].image)
         price.text = "$" + items[position].price.toString()

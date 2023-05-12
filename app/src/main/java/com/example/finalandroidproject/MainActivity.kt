@@ -15,7 +15,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
     setContentView(R.layout.activity_main)
 
     customerButton = findViewById(R.id.customer_button)
-
+    //main screen is just "home screen"; takes user to shopping menu
     customerButton.setOnClickListener {
         Intent(this, ShopMenu::class.java).also {
             startActivity(it)

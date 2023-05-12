@@ -29,6 +29,7 @@ class ShopMenu : AppCompatActivity() {
         adapter = ItemAdapter(this, R.layout.item_layout, itemList)
         listView.adapter = adapter
 
+        //checks item, adds to "cart"
         listView.setOnItemClickListener{parent, view, position, id ->
             listView.isItemChecked(position)
             Toast.makeText(this, "You Clicked: " + listView.getItemAtPosition(position), Toast.LENGTH_SHORT).show()
@@ -42,6 +43,7 @@ class ShopMenu : AppCompatActivity() {
     }
 
     private fun setUpData(): ArrayList<ItemModel> {
+        //array
         var tempList = ArrayList<ItemModel>()
 
         val itemNames = arrayOf(
